@@ -1,0 +1,44 @@
+{TODO 2 : Tylko jedna instancja}
+{TODO 5  -cCode Folding : Brak foldów przy komentarzach przez skip regiony}
+{TODO 2 : W³asne okienko "pytania o zapisanie zmian"}
+{DONE 4 : B³¹d przy "Zapisz Wszystkie", ustawia niezapisane pliki jako zapisane i dodaje do MRU}
+{TODO 2 : Szablony dokumentów}
+{TODO 5 -cCode Folding : Usuwanie foldów po usuniêciu bloku tekstu}
+{TODO 2 : Czyszczenie list MRU}
+{TODO 5 -cCode Folding : Okresowe List index out of bounds w UpdateFoldRegionParents}
+{TODO 5 -cCode Folding : Nie reagowaæ na Enter je¿eli zwiniêty fold ma swoje s³owo zamykaj¹ce w lini z innym foldem}
+
+
+
+
+
+{TODO 4 : Integracja z pow³ok¹}
+
+
+
+
+
+
+
+
+
+
+
+
+
+{TODO 2 : ZnajdŸ/zamieñ w plikach}
+{TODO 2 : Projekty}
+
+
+
+{TODO 2 : Aktywna linia w edytorze wyró¿niana dwoma przerywanymi liniamii zamiast tylko t³em}
+
+
+
+
+
+
+{TODO 3 : Podœwietlanie pasuj¹cych s³ów kluczowych w PaintTransient}
+{TODO 3 : Przenieœæ rysowanie linii zwijania do PaintGutter}
+
+ 

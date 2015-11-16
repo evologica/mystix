@@ -1,0 +1,1 @@
+Contributors: Luciano Cargnelutti (programming, testing, portuguese (br) translation), Robin Kreis (german translation), Sergey Galezdinov (russian translation), Sergey Titov (testing).

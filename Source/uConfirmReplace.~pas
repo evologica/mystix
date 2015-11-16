@@ -1,0 +1,74 @@
+unit uConfirmReplace;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls;
+
+type
+  TConfirmReplaceDialog = class(TForm)
+    imgIcon: TImage;
+    lblQuestion: TLabel;
+    btnCancel: TButton;
+    btnSkip: TButton;
+    btnReplace: TButton;
+    btnAll: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+    procedure ReadLanguageData;
+  public
+    { Public declarations }
+    function Execute(X, Y: Integer; ASearch, AReplace: String): TModalResult;
+  end;
+
+var
+  ConfirmReplaceDialog: TConfirmReplaceDialog;
+
+implementation
+
+uses uUtils, uMyIniFiles, uMain;
+
+{$R *.dfm}
+
+function TConfirmReplaceDialog.Execute(X, Y: Integer; ASearch,
+  AReplace: String): TModalResult;
+begin
+	Left := X;
+  Top := Y;
+	lblQuestion.Caption := Format(sStrings[siConfirmReplace], [ASearch, AReplace]);
+	Result := ShowModal;
+end;
+
+procedure TConfirmReplaceDialog.FormCreate(Sender: TObject);
+begin
+	ReadLanguageData;
+	imgIcon.Picture.Icon.Handle := LoadIcon(0, IDI_ASTERISK);
+end;
+
+procedure TConfirmReplaceDialog.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+	Action := caFree;
+end;
+
+procedure TConfirmReplaceDialog.ReadLanguageData;
+var
+	i: Integer;
+begin
+	with TMyIniFile.Create(Languages.Values[ActiveLanguage]) do
+  try
+  	Caption := ReadString('ConfirmReplaceDialog', 'Caption', '');
+
+  	for i := 0 to ComponentCount - 1 do
+    	if (Components[i] is TControl) then
+				(Components[i] as TControl).SetTextBuf( PChar(ReadString('ConfirmReplaceDialog',
+        	Components[i].Name + '.Caption', '')) );
+  finally
+		Free;
+  end;
+end;
+
+end.

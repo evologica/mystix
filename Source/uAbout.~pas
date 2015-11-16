@@ -1,0 +1,53 @@
+unit uAbout;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TAboutDialog = class(TForm)
+    Label1: TLabel;
+    lblVersion: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Button1: TButton;
+    memContributors: TMemo;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+    procedure ReadLanguageData;
+  public
+    { Public declarations }
+  end;
+
+var
+  AboutDialog: TAboutDialog;
+
+implementation
+
+uses uMain, uMyIniFiles, uUtils;
+
+{$R *.dfm}
+
+procedure TAboutDialog.FormCreate(Sender: TObject);
+begin
+	ReadLanguageData;
+
+  if FileExists(AppPath + 'Contributors.txt') then
+    memContributors.Lines.LoadFromFile(AppPath + 'Contributors.txt');
+end;
+
+procedure TAboutDialog.ReadLanguageData;
+begin
+	with TMyIniFile.Create(Languages.Values[ActiveLanguage]) do
+  try
+  	Caption := ReadString('AboutDialog', 'Caption', '');
+		lblVersion.Caption := Format(ReadString('AboutDialog', 'lblVersion.Caption', ''), [ProjectVersion]);
+  finally
+  	Free;
+  end;
+end;
+
+end.

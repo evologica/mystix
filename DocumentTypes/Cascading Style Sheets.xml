@@ -1,0 +1,115 @@
+<UniHighlighter>
+	<CodeFolding>
+		<FoldRegion AddCloseKeyword="1" AllowNoSubFolds="0" Type="0" WholeWords="0">
+			<Open Keyword="{" RegExp="" UseRegExp="0"/>
+			<Close Keyword="}" RegExp="" UseRegExp="0"/>
+			<SubFoldRegions>
+			</SubFoldRegions>
+		</FoldRegion>
+		<FoldRegion AddCloseKeyword="1" AllowNoSubFolds="1" Type="1" WholeWords="1">
+			<Open Keyword="/*" RegExp="" UseRegExp="0"/>
+			<Close Keyword="*/" RegExp="" UseRegExp="0"/>
+			<SubFoldRegions>
+			</SubFoldRegions>
+		</FoldRegion>
+		<SkipRegions>
+			<String Open="&quot;" Close="&quot;" Escape="\" />
+			<String Open="&apos;" Close="&apos;" Escape="\" />
+			<MultiLineComment Open="/*" Close="*/" />
+			<SingleLineComment Open="//" />
+		</SkipRegions>
+	</CodeFolding>
+ <SchemeIndex>0</SchemeIndex>
+ <Schemes>
+  <S>Vitaly Nevzorov</S>
+ </Schemes>
+ <Range Name="Root">
+ <Attri>
+  <Back>-2147483643</Back>
+  <Fore>0</Fore>
+  <Style></Style>
+  <ParentForeground>False</ParentForeground>
+  <ParentBackground>False</ParentBackground>
+ </Attri>
+ <OpenSymbol></OpenSymbol>
+ <OpenSymbolFinishOnEol>False</OpenSymbolFinishOnEol>
+ <CloseSymbol></CloseSymbol>
+ <CloseSymbolFinishOnEol>False</CloseSymbolFinishOnEol>
+ <OpenSymbolStartLine>False</OpenSymbolStartLine>
+ <CloseSymbolStartLine>False</CloseSymbolStartLine>
+ <DelimiterChars>!&qt;#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^`{|}~</DelimiterChars>
+ <OpenSymbolPartOfTerm>Right</OpenSymbolPartOfTerm>
+ <CloseSymbolPartOfTerm>False</CloseSymbolPartOfTerm>
+ <CloseOnTerm>False</CloseOnTerm>
+ <CloseOnEol>False</CloseOnEol>
+ <AllowPredClose>False</AllowPredClose>
+ <CaseSensitive>False</CaseSensitive>
+  <Range Name="Body">
+  <Attri>
+   <Back>-2147483643</Back>
+   <Fore>16711808</Fore>
+   <Style></Style>
+   <ParentForeground>False</ParentForeground>
+   <ParentBackground>True</ParentBackground>
+  </Attri>
+  <OpenSymbol>BODY</OpenSymbol>
+  <OpenSymbolFinishOnEol>False</OpenSymbolFinishOnEol>
+  <CloseSymbol></CloseSymbol>
+  <CloseSymbolFinishOnEol>False</CloseSymbolFinishOnEol>
+  <OpenSymbolStartLine>False</OpenSymbolStartLine>
+  <CloseSymbolStartLine>False</CloseSymbolStartLine>
+  <DelimiterChars>!&qt;#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^`{|}~</DelimiterChars>
+  <OpenSymbolPartOfTerm>False</OpenSymbolPartOfTerm>
+  <CloseSymbolPartOfTerm>False</CloseSymbolPartOfTerm>
+  <CloseOnTerm>True</CloseOnTerm>
+  <CloseOnEol>False</CloseOnEol>
+  <AllowPredClose>False</AllowPredClose>
+  <CaseSensitive>False</CaseSensitive>
+  </Range>
+  <Range Name="Value">
+  <Attri>
+   <Back>-2147483643</Back>
+   <Fore>32768</Fore>
+   <Style></Style>
+   <ParentForeground>False</ParentForeground>
+   <ParentBackground>True</ParentBackground>
+  </Attri>
+  <OpenSymbol>:</OpenSymbol>
+  <OpenSymbolFinishOnEol>False</OpenSymbolFinishOnEol>
+  <CloseSymbol></CloseSymbol>
+  <CloseSymbolFinishOnEol>False</CloseSymbolFinishOnEol>
+  <OpenSymbolStartLine>False</OpenSymbolStartLine>
+  <CloseSymbolStartLine>False</CloseSymbolStartLine>
+  <DelimiterChars>!&qt;#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^`{|}~</DelimiterChars>
+  <OpenSymbolPartOfTerm>Right</OpenSymbolPartOfTerm>
+  <CloseSymbolPartOfTerm>False</CloseSymbolPartOfTerm>
+  <CloseOnTerm>False</CloseOnTerm>
+  <CloseOnEol>True</CloseOnEol>
+  <AllowPredClose>False</AllowPredClose>
+  <CaseSensitive>False</CaseSensitive>
+  </Range>
+  <Range Name="Param">
+  <Attri>
+   <Back>-2147483643</Back>
+   <Fore>255</Fore>
+   <Style></Style>
+   <ParentForeground>False</ParentForeground>
+   <ParentBackground>True</ParentBackground>
+  </Attri>
+  <OpenSymbol>.</OpenSymbol>
+  <OpenSymbolFinishOnEol>False</OpenSymbolFinishOnEol>
+  <CloseSymbol></CloseSymbol>
+  <CloseSymbolFinishOnEol>False</CloseSymbolFinishOnEol>
+  <OpenSymbolStartLine>False</OpenSymbolStartLine>
+  <CloseSymbolStartLine>False</CloseSymbolStartLine>
+  <DelimiterChars>!&qt;#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^`{|}~</DelimiterChars>
+  <OpenSymbolPartOfTerm>Right</OpenSymbolPartOfTerm>
+  <CloseSymbolPartOfTerm>False</CloseSymbolPartOfTerm>
+  <CloseOnTerm>True</CloseOnTerm>
+  <CloseOnEol>False</CloseOnEol>
+  <AllowPredClose>False</AllowPredClose>
+  <CaseSensitive>False</CaseSensitive>
+  </Range>
+ </Range>
+ <CopyRight>Rule file for UniHighlighter Delphi component (Copyright(C) Fantasist(walking_in_the_sky@yahoo.com), Vit(nevzorov@yahoo.com), Vitalik(v-e-t-a-l@ukr.net), 2002-2004)</CopyRight>
+</UniHighlighter>

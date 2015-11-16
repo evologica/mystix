@@ -1,0 +1,50 @@
+unit uOutput;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, JvDockControlForm, JvComponent, JvDockVCStyle, StdCtrls,
+  JvTabBar, JvDockVSNetStyle, JvDockVIDStyle;
+
+type
+  TOutputForm = class(TForm)
+    JvDockClient: TJvDockClient;
+    Memo1: TMemo;
+    tbOutputs: TJvTabBar;
+    JvModernTabBarPainter: TJvModernTabBarPainter;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure ReadLanguageData;
+  end;
+
+var
+  OutputForm: TOutputForm;
+
+implementation
+
+uses uMain, uMyIniFiles;
+
+{$R *.dfm}
+
+{ TOutputForm }
+
+procedure TOutputForm.ReadLanguageData;
+begin
+	with TMyIniFile.Create(Languages.Values[ActiveLanguage]) do
+  try
+  	Caption := ReadString('OutputForm', 'Caption', '');
+  finally
+  	Free;
+  end;
+end;
+
+procedure TOutputForm.FormCreate(Sender: TObject);
+begin
+	ReadLanguageData;
+end;
+
+end.

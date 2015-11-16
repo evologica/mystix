@@ -1,0 +1,72 @@
+Version 0.2.4:
+- Fixed: Bug with collapse/uncollapse toolbar buttons resizing themselves after changing language to other than english,
+- Fixed: Pascal code folding issue, may probably cause other bugs,
+- Fixed: Small issues with portuguese (br) translation,
+- Fixed: Incorrect positioning of collapsed code hints,
+- New: Function List window showing all functions/procedures in document, can be set-up for every language using regular expressions,
+- New: Highlighting of matching keywords,
+- New: Settings dialog (finally),
+- New: New syntax files and code folding is finally set up for existing ones,
+- New: Find/Replace in files command,
+- New: Prompt on replace implemented,
+- New: Shortcuts configuration,
+- New: Print command (isn't fake no more),
+- New: Regular expressions help buttons in search/replace dialogs,
+- New: Now you can change the style of collapse/uncollapse marks,
+- New: New edit commands: 
+
+Version 0.2.3:
+- Fixed: Changes after "Collapse Current" command are now instantly visible,
+- New: Stautus bar enhancments (key status, current document type etc.),
+- New: Multilingual interface (English, Polish and Portuguese (Brazilian) languages are avaible),
+
+Version 0.2.2:
+- Fixed: Collapsed folds content lost when calling undo/redo,
+- Fixed: Collapsed mark in wrong place (moved to right),
+- Fixed: Hint displayed when fold isn't collapsed,	
+- Fixed: Hint not displayed when moving over collapsed mark (after scrolling document contents),
+- Improved: Speed improvment of Collapse All command,
+- New: Workspaces allowing to quickly reopen group of files,
+- New: Collapse the current block command,
+- New: Number of selected lines displayed on status bar,
+
+Version 0.2.1:
+- Fixed: bug with incorrect position of folding bar,
+- New: hints with collapsed code when moving cursor over collapsed fold mark,	
+- New: lines with collapsed folds are now read-only,
+- New: find/replace now allows to search in all open files,
+
+Version 0.2.0:
+- Fixed: deleting line with collapsed fold now deletes this fold,
+- New: colors of gutter, folding bar and folding lines can be customized,
+- New: highlighters are customizable, new ones can be addes easily,
+
+Version 0.1.5:
+- Fixed: wrong line numbering when word wrap is enabled,
+- Fixed: fold marks doesn't follow when typing in word wrap,
+- Fixed: fold marks doesn't follow if editor window is resized,
+- Fixed: folder bar invisible if line numbers are disabled,
+- Fixed: incorrect painting of indent guides with some fonts,
+- Fixed: disappearing lines below collapsed folds,	
+- New: no indent guides in wrapped rows,
+
+Version 0.1.4:
+- Fixed: collapsing mark doubled,
+- New: code folding can now be used together with word wrap,
+
+Versiom 0.1.3:
+- Fixed: "Access Violation" errors when closing documents, 
+- Fixed: no collapsing mark drawn if there was a collapsable and not collapsable fold region in one line, 
+- Fixed: collapsed incorrectly when there was a collapsable and not collapsable fold region in one line,
+- Fixed: when gutter is invisible the fold lines are still drawn (they blink),
+
+Version 0.1.2:
+- Fixed: sometimes code folding messed up when typying text that is a keyword that denotes fold region,
+- New: now documents are represented by tabs with close buttons,
+- New: code folding can now be configured,
+- New: document types are now stored in XML,
+
+Version 0.1.1:
+- Fixed: now buttons and lines on the folder bar and indent guides are being redrawn when user pastes or cuts text,
+- Fixed: bug with chars changing their color to the background color,
+- New: matching keywords and indent guides highlighting,

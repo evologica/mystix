@@ -1,0 +1,64 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{d303085b-3ab3-455f-b57f-b156d787f54a}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Projects Include="Source\Mystix.dproj" />
+    <Projects Include="Source\SynEdit\Packages\SynEdit_D2007.dproj" />
+    <Projects Include="Source\SynEdit\Packages\SynEdit_R2007.dproj" />
+    <Projects Include="Source\SynUniSyn\Packages\SynUniSyn_D7.dproj" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Default.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+  <BorlandProject xmlns=""> <Default.Personality> </Default.Personality> </BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Target Name="SynEdit_R2007">
+    <MSBuild Projects="Source\SynEdit\Packages\SynEdit_R2007.dproj" Targets="" />
+  </Target>
+  <Target Name="SynEdit_R2007:Clean">
+    <MSBuild Projects="Source\SynEdit\Packages\SynEdit_R2007.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="SynEdit_R2007:Make">
+    <MSBuild Projects="Source\SynEdit\Packages\SynEdit_R2007.dproj" Targets="Make" />
+  </Target>
+  <Target Name="SynEdit_D2007">
+    <MSBuild Projects="Source\SynEdit\Packages\SynEdit_D2007.dproj" Targets="" />
+  </Target>
+  <Target Name="SynEdit_D2007:Clean">
+    <MSBuild Projects="Source\SynEdit\Packages\SynEdit_D2007.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="SynEdit_D2007:Make">
+    <MSBuild Projects="Source\SynEdit\Packages\SynEdit_D2007.dproj" Targets="Make" />
+  </Target>
+  <Target Name="SynUniSyn_D7">
+    <MSBuild Projects="Source\SynUniSyn\Packages\SynUniSyn_D7.dproj" Targets="" />
+  </Target>
+  <Target Name="SynUniSyn_D7:Clean">
+    <MSBuild Projects="Source\SynUniSyn\Packages\SynUniSyn_D7.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="SynUniSyn_D7:Make">
+    <MSBuild Projects="Source\SynUniSyn\Packages\SynUniSyn_D7.dproj" Targets="Make" />
+  </Target>
+  <Target Name="Mystix">
+    <MSBuild Projects="Source\Mystix.dproj" Targets="" />
+  </Target>
+  <Target Name="Mystix:Clean">
+    <MSBuild Projects="Source\Mystix.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="Mystix:Make">
+    <MSBuild Projects="Source\Mystix.dproj" Targets="Make" />
+  </Target>
+  <Target Name="Build">
+    <CallTarget Targets="SynEdit_R2007;SynEdit_D2007;SynUniSyn_D7;Mystix" />
+  </Target>
+  <Target Name="Clean">
+    <CallTarget Targets="SynEdit_R2007:Clean;SynEdit_D2007:Clean;SynUniSyn_D7:Clean;Mystix:Clean" />
+  </Target>
+  <Target Name="Make">
+    <CallTarget Targets="SynEdit_R2007:Make;SynEdit_D2007:Make;SynUniSyn_D7:Make;Mystix:Make" />
+  </Target>
+  <Import Condition="Exists('$(MSBuildBinPath)\Borland.Group.Targets')" Project="$(MSBuildBinPath)\Borland.Group.Targets" />
+</Project>

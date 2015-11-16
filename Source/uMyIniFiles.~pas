@@ -1,0 +1,39 @@
+unit uMyIniFiles;
+
+interface
+
+uses
+	Graphics, SysUtils, IniFiles;
+
+type
+	TMyIniFile = class(TIniFile)
+  public
+  	function ReadColor(const Section, Ident: String; Default: TColor): TColor;
+    procedure WriteColor(const Section, Ident: String; Value: TColor);
+  end;
+
+implementation
+
+{ TMyIniFile }
+
+function TMyIniFile.ReadColor(const Section, Ident: String;
+  Default: TColor): TColor;
+var
+	Color: String;
+begin
+	Color := ReadString(Section, Ident, '');
+
+  if Color <> '' then
+  	Result := TColor( StrToInt(Color) )
+  else
+  	Result := Default;
+end;
+
+procedure TMyIniFile.WriteColor(const Section, Ident: String;
+  Value: TColor);
+begin
+	WriteString(Section, Ident, '$' + IntToHex(Integer(Value), 8));
+end;
+
+end.
+ 

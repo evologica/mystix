@@ -1,0 +1,39 @@
+package SynUniSyn_D6;
+
+{$R *.res}
+{$R 'SynUniHighlighter.dcr'}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'SynUniSyn component'}
+{$IMPLICITBUILD OFF}
+
+requires
+  designide,
+  SynEdit_D6;
+
+contains
+  SynUniReg in '..\Source\SynUniReg.pas',
+  SynUniRules in '..\Source\SynUniRules.pas',
+  SynUniClasses in '..\Source\SynUniClasses.pas',
+  SynUniHighlighter in '..\Source\SynUniHighlighter.pas';
+
+end.

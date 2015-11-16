@@ -1,0 +1,29 @@
+unit uExSynEdit;
+
+interface
+
+uses
+  Messages, SynEdit;
+
+type
+  TWmMButtonUpProcedure = procedure (var Message: TMessage) of object;
+
+  TExSynEdit = class(TSynEdit)
+  private
+    fOnMButtonUp: TWmMButtonUpProcedure;
+    procedure WmMButtonUp(var Message: TMessage); message WM_MBUTTONUP;
+  public
+    property OnMButtonUp: TWmMButtonUpProcedure write fOnMButtonUp;
+  end;
+
+implementation
+
+{ TExSynEdit }
+
+procedure TExSynEdit.WmMButtonUp(var Message: TMessage);
+begin
+  if Assigned(fOnMButtonUp) then
+    fOnMButtonUp(Message);
+end;
+
+end.

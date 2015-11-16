@@ -1,0 +1,117 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{0c373a87-a38f-4e0a-8bf0-8330ab457c35}</ProjectGuid>
+    <MainSource>Mystix.dpr</MainSource>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>C:\Programowanie\Mystix_v2\Mystix.exe</DCC_DependencyCheckOutputName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_ExeOutput>C:\Programowanie\Mystix_v2</DCC_ExeOutput>
+    <DCC_UnitSearchPath>$(DELPHI)\Lib\Debug</DCC_UnitSearchPath>
+    <DCC_ResourcePath>$(DELPHI)\Lib\Debug</DCC_ResourcePath>
+    <DCC_ObjPath>$(DELPHI)\Lib\Debug</DCC_ObjPath>
+    <DCC_IncludePath>$(DELPHI)\Lib\Debug</DCC_IncludePath>
+    <DCC_Define>RELEASE</DCC_Define>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_SymbolReferenceInfo>2</DCC_SymbolReferenceInfo>
+    <DCC_ExeOutput>C:\Programowanie\Mystix_v2</DCC_ExeOutput>
+    <DCC_UnitSearchPath>$(DELPHI)\Lib\Debug</DCC_UnitSearchPath>
+    <DCC_ResourcePath>$(DELPHI)\Lib\Debug</DCC_ResourcePath>
+    <DCC_ObjPath>$(DELPHI)\Lib\Debug</DCC_ObjPath>
+    <DCC_IncludePath>$(DELPHI)\Lib\Debug</DCC_IncludePath>
+    <DCC_Define>DEBUG</DCC_Define>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType>VCLApplication</Borland.ProjectType>
+    <BorlandProject>
+<BorlandProject xmlns=""> <Delphi.Personality>   <Parameters>
+      <Parameters Name="UseLauncher">False</Parameters>
+      <Parameters Name="LoadAllSymbols">True</Parameters>
+      <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+    </Parameters>
+    <VersionInfo>
+      <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+      <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+      <VersionInfo Name="MajorVer">0</VersionInfo>
+      <VersionInfo Name="MinorVer">3</VersionInfo>
+      <VersionInfo Name="Release">1</VersionInfo>
+      <VersionInfo Name="Build">0</VersionInfo>
+      <VersionInfo Name="Debug">False</VersionInfo>
+      <VersionInfo Name="PreRelease">False</VersionInfo>
+      <VersionInfo Name="Special">False</VersionInfo>
+      <VersionInfo Name="Private">False</VersionInfo>
+      <VersionInfo Name="DLL">False</VersionInfo>
+      <VersionInfo Name="Locale">1045</VersionInfo>
+      <VersionInfo Name="CodePage">1250</VersionInfo>
+    </VersionInfo>
+    <VersionInfoKeys>
+      <VersionInfoKeys Name="CompanyName"></VersionInfoKeys>
+      <VersionInfoKeys Name="FileDescription">Programmers text editor</VersionInfoKeys>
+      <VersionInfoKeys Name="FileVersion">0.3.1.0</VersionInfoKeys>
+      <VersionInfoKeys Name="InternalName"></VersionInfoKeys>
+      <VersionInfoKeys Name="LegalCopyright">(C) 2005 Piotr Jura</VersionInfoKeys>
+      <VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys>
+      <VersionInfoKeys Name="OriginalFilename">Mystix.exe</VersionInfoKeys>
+      <VersionInfoKeys Name="ProductName">Mystix</VersionInfoKeys>
+      <VersionInfoKeys Name="ProductVersion">0.3.0</VersionInfoKeys>
+      <VersionInfoKeys Name="Comments"></VersionInfoKeys>
+    </VersionInfoKeys>
+    <Source>
+      <Source Name="MainSource">Mystix.dpr</Source>
+    </Source>
+  </Delphi.Personality> </BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <ItemGroup />
+  <ItemGroup>
+    <DelphiCompile Include="Mystix.dpr">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="uAbout.pas">
+      <Form>AboutDialog</Form>
+    </DCCReference>
+    <DCCReference Include="uConfirmReplace.pas">
+      <Form>ConfirmReplaceDialog</Form>
+    </DCCReference>
+    <DCCReference Include="uDocuments.pas" />
+    <DCCReference Include="uExSynEdit.pas" />
+    <DCCReference Include="uFind.pas">
+      <Form>FindDialog</Form>
+    </DCCReference>
+    <DCCReference Include="uFunctionList.pas">
+      <Form>FunctionListForm</Form>
+    </DCCReference>
+    <DCCReference Include="uGoToLine.pas">
+      <Form>GoToLineDialog</Form>
+    </DCCReference>
+    <DCCReference Include="uMain.pas">
+      <Form>MainForm</Form>
+    </DCCReference>
+    <DCCReference Include="uMRU.pas" />
+    <DCCReference Include="uMyIniFiles.pas" />
+    <DCCReference Include="uOneInstance.pas" />
+    <DCCReference Include="uOptions.pas">
+      <Form>OptionsDialog</Form>
+    </DCCReference>
+    <DCCReference Include="uOutput.pas">
+      <Form>OutputForm</Form>
+    </DCCReference>
+    <DCCReference Include="uProject.pas">
+      <Form>ProjectForm</Form>
+    </DCCReference>
+    <DCCReference Include="uReplace.pas">
+      <Form>ReplaceDialog</Form>
+    </DCCReference>
+    <DCCReference Include="uUtils.pas" />
+    <None Include="Mystix.todo" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+</Project>

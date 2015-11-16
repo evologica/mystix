@@ -1,0 +1,26 @@
+unit uProject;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, JvComponent, JvDockControlForm, JvDockVCStyle;
+
+type
+  TProjectForm = class(TForm)
+    JvDockClient: TJvDockClient;
+    JvDockVCStyle: TJvDockVCStyle;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ProjectForm: TProjectForm;
+
+implementation
+
+{$R *.dfm}
+
+end.
